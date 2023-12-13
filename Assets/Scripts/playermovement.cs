@@ -23,12 +23,15 @@ public class Playermovement : MonoBehaviour
     private void Update()
     {
         Inputs();
+        UpdateCamPos();
+        cam.gameObject.GetComponent<PlayerRotation>().CameraRotation();
         RotateToCam();
         CheckIfGrounded();
     }
     private void FixedUpdate()
     {
         Movement();
+
     }
     private void Inputs()
     {
@@ -59,6 +62,10 @@ public class Playermovement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+    private void UpdateCamPos()
+    {
+        cam.transform.position = new Vector3(transform.position.x, transform.position.y + 0.7f, transform.position.z);
     }
 }
 
