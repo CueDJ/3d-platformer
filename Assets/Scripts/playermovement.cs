@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class playermovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    private Rigidbody rb;
-    private Vector3 moveDirection;
-    public Transform orientation;
+    [SerializeField] private float speed; // Speed multiplier
+    private Rigidbody rb; // Rigidbody component cache
+    private Vector3 moveDirection; // Stores the direction of movement
+    public Transform orientation; // Stores the orientation of the player
     private float verticalInput;
     private float horizontalInput;
     private void Start()
@@ -14,8 +14,7 @@ public class playermovement : MonoBehaviour
     }
     private void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        Inputs();
     }
     private void FixedUpdate()
     {
@@ -23,7 +22,8 @@ public class playermovement : MonoBehaviour
     }
     private void Inputs()
     {
-
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
     }
     private void Movement()
     {
