@@ -495,6 +495,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 938029882}
+    - target: {fileID: 8001660285591137736, guid: 6e8fd3d0ce07b58478ee91ed98f05dc0, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
