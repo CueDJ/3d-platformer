@@ -4,6 +4,7 @@ public class Playermovement : MonoBehaviour
 {
     [SerializeField] private float speed; // Speed multiplier
     [SerializeField] private float jumpForce; // Jump force multiplier
+    [SerializeField] private float maxJumpRaycastDistance; // Max distance for the jump raycast
     private Rigidbody rb; // Rigidbody component cache
     private Vector3 moveDirection; // Stores the direction of movement
     public Transform orientation; // Stores the orientation of the player
@@ -54,7 +55,7 @@ public class Playermovement : MonoBehaviour
     }
     private void CheckIfGrounded()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit raycast, 1.1f))
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit raycast, maxJumpRaycastDistance))
         {
             isGrounded = true;
         }
