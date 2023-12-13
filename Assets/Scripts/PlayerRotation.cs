@@ -25,6 +25,6 @@ public class PlayerRotation : MonoBehaviour
         var yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
 
         transform.localRotation = xQuat * yQuat;
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.7f, player.transform.position.z); ;
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.7f, player.transform.position.z);
     }
 }

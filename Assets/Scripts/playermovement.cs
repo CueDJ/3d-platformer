@@ -13,6 +13,7 @@ public class Playermovement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         cam = Camera.main;
+        Cursor.visible = false;
     }
     private void Update()
     {
